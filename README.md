@@ -1,4 +1,4 @@
-# MusGo_int
+# MusGo_int8
 Provides serialization of the Golang's `int8` type.
 
 # How to use
