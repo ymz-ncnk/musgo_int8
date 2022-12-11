@@ -9,7 +9,10 @@ Simply cast `int8` to `musgo_int8.Int8`:
 	buf := make([]byte, musgo_int8.Int8(n).SizeMUS())
 	musgo_int8.Int8(n).MarshalMUS(buf)
 	// Unmarshal
-	(*musgo_int8.Int8)(&n).UnmarshalMUS(buf)
+	_, err := (*musgo_int8.Int8)(&n).UnmarshalMUS(buf)
+	if err != nil {
+		panic(err)
+	}
 ```
 
 # More info
